@@ -1,0 +1,46 @@
+TECHNOLOGIES LIST
+
+---------------------
+Since there will be a good amount of Mac and Windows users,
+I decided it was best to do all tutorials through Unix Shell
+since Mac has it native and you can install the WSL for windows
+-------------------------------------------------------------
+
+Windows-Specific:
+
+Windows Subsytem for Linux: https://docs.microsoft.com/en-us/windows/wsl/install
+I will use Ubuntu but you can choose your version of Linux ^^
+
+Tutorial for Windows 10: https://youtu.be/X-DHaQLrBi8
+Tutorial for Windows 11: https://youtu.be/5EgV91-f1co
+
+
+
+Mac Specific:
+
+For later installments Mac user will need homebrew for running some of the command line services
+
+Homebrew Installation Tutorial: https://youtu.be/UBdiA0SJqLE
+
+
+Everyone
+-----------------------------
+
+
+Python 3.10: https://www.python.org/downloads/
+Postman: https://www.postman.com/downloads/
+Visual Studio Code: https://code.visualstudio.com/
+-----------------------------------------------------
+
+What will we be doing:
+
+Understanding what an API is and what it can be used for
+Understanding what JSON format is and what it can be used for
+Creating a simple API that can do the basic CRUD operations
+Creating a simple client script that can access the API methods
+
+If time allows for:
+Get into using a Public API
+--------------------------------------------------------
+
+
