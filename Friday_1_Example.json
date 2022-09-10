@@ -1,0 +1,99 @@
+{
+
+    "example_db":
+    {
+
+
+        "users": {
+
+
+            "1":{
+    
+                "userID": "1",
+                "firstName": "Jordan",
+                "lastName": "Wolfe",
+                "age": 32
+    
+    
+    
+    
+    
+    
+            },
+            "2":{
+    
+                "userID": "2",
+                "firstName": "Mace",
+                "lastName": "Windu",
+                "age": 12
+    
+    
+    
+    
+    
+    
+            },
+            "3":{
+    
+                "userID": "3",
+                "firstName": "Mark",
+                "lastName": "Jones",
+                "age": 24
+    
+    
+    
+    
+    
+    
+            },
+            "4":{
+    
+                "userID": "4",
+                "firstName": "Sasha",
+                "lastName": "Simmons",
+                "age": 32
+    
+    
+    
+    
+    
+    
+            },
+            "5": {
+
+                "userID": "5",
+                "firstName": "Jack",
+                "lastName": "Johnson",
+                "age": 25
+
+
+
+
+            }, 
+			"6":{
+				
+				"userID": "6",
+				"firstName": "Mia",
+				"lastName": "Tate",
+				"age": 31
+				
+				
+				
+				
+			}
+    
+            
+    
+    
+    
+    
+        }
+    
+
+    }
+  
+
+
+
+
+}
