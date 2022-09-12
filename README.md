@@ -13,3 +13,7 @@ The colors that it allows is predefined in the Flashlight Model class
 
 Also in the week_1 directory, it has the python code for the api and requester
 
+
+
+** also for note this will now be a repo for all weeks, but for week 1 the flashlight project in spring is apart of week 1
+
