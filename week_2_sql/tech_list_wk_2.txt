@@ -1,0 +1,54 @@
+Technology List week 2
+------------------------------
+
+Java 8 or 11
+
+Java 8: https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html
+Java 11: https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html
+
+** for windows make sure to check the option to add the PATH
+
+MySQL Workbench
+
+IntelliJ IDEA
+
+https://www.jetbrains.com/idea/
+
+
+^^ If you sign up for a jetbrains account with your unt email, they
+will allow for you to acquire a free ultimate license for it, so you could get the ultimate version
+
+
+but if you can't get the license the community edition is fine as well
+
+
+
+--------------------------------
+
+
+Description for Tutorial
+---------------------------------
+
+
+
+We will cover some SQL basics and with the help
+of java spring later after to design a library management system
+
+
+Topic Areas
+-------------------------------------
+SQL
+Database
+ERDs
+Java
+Springboot
+APIs
+
+
+
+
+
+
+
+
+
