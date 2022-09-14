@@ -6,9 +6,19 @@ Java 8 or 11
 Java 8: https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html
 Java 11: https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html
 
+
+
+For my tutorial I will be using Java 11 for my code, but Java 8 should still run the same as 
+long as the environment and springboot app is configured for it
+
 ** for windows make sure to check the option to add the PATH
 
+
+
 MySQL Workbench
+
+Windows Tutorial: https://youtu.be/WuBcTJnIuzo
+Mac Tutorial: https://youtu.be/-BDbOOY9jsc
 
 IntelliJ IDEA
 
