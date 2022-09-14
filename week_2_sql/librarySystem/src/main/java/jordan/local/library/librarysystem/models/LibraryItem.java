@@ -1,6 +1,7 @@
 package jordan.local.library.librarysystem.models;
 
 
+import jordan.local.library.librarysystem.enums.ItemStatus;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,7 +13,7 @@ import java.util.Date;
 @Getter
 @Setter
 @Entity(name = "LibraryItem")
-@Inheritance(strategy = InheritanceType.TABLE_PER_CLASS)
+@Inheritance(strategy = InheritanceType.JOINED)
 @DiscriminatorColumn(name = "ItemType", discriminatorType = DiscriminatorType.STRING)
 public abstract class LibraryItem {
     @Id

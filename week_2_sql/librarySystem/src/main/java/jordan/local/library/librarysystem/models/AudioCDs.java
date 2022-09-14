@@ -1,6 +1,7 @@
 package jordan.local.library.librarysystem.models;
 
 
+import jordan.local.library.librarysystem.enums.ItemStatus;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

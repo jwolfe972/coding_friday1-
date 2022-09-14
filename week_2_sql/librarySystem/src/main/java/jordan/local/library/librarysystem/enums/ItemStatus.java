@@ -1,4 +1,4 @@
-package jordan.local.library.librarysystem.models;
+package jordan.local.library.librarysystem.enums;
 
 public enum ItemStatus {
 

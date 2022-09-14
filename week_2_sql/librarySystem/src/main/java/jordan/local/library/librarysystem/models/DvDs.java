@@ -1,6 +1,7 @@
 package jordan.local.library.librarysystem.models;
 
 
+import jordan.local.library.librarysystem.enums.ItemStatus;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -28,7 +29,7 @@ public class DvDs extends LibraryItem {
     private String studioName;
 
 
-    public DvDs(String category, int runTime, String studioName,  double price, ItemStatus status, int days, Date releaseDate,
+    public DvDs(String category, int runTime, String studioName, double price, ItemStatus status, int days, Date releaseDate,
                 String title){
 
         super(price, status, days, releaseDate, title);

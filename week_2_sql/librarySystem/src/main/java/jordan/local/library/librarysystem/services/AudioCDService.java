@@ -2,12 +2,13 @@ package jordan.local.library.librarysystem.services;
 
 
 import jordan.local.library.librarysystem.models.AudioCDs;
-import jordan.local.library.librarysystem.models.ItemStatus;
+import jordan.local.library.librarysystem.enums.ItemStatus;
 import jordan.local.library.librarysystem.models.LibraryItem;
 import jordan.local.library.librarysystem.repos.AudioCDRepo;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class AudioCDService {
@@ -29,5 +30,11 @@ public class AudioCDService {
 
 
         return audioCDRepo.save(cd);
+    }
+
+    public List<AudioCDs> getAllAudioCDs(){
+
+
+        return audioCDRepo.findAll();
     }
 }

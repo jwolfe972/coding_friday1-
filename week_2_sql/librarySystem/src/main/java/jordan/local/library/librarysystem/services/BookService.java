@@ -2,12 +2,13 @@ package jordan.local.library.librarysystem.services;
 
 
 import jordan.local.library.librarysystem.models.Books;
-import jordan.local.library.librarysystem.models.ItemStatus;
+import jordan.local.library.librarysystem.enums.ItemStatus;
 import jordan.local.library.librarysystem.models.LibraryItem;
 import jordan.local.library.librarysystem.repos.BookRepo;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 public class BookService {
@@ -30,5 +31,11 @@ public class BookService {
         return bookRepo.save(newBook);
 
 
+    }
+
+    public List<Books> getAllBooks(){
+
+
+        return bookRepo.findAll();
     }
 }
