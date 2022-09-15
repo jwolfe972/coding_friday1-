@@ -13,7 +13,6 @@ import java.util.Date;
 @Getter
 @Setter
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity(name = "Loans")
 public class Loans {
 
@@ -41,6 +40,20 @@ public class Loans {
 
     @Column(name = "status", nullable = false )
     private LoanStatus loanStatus;
+
+
+    @Column(name = "numberOfRechecks", nullable = false)
+    private int numberOfRechecks = 1;
+
+
+    public Loans(LibraryItem item, Patron p, Date d){
+
+
+        this.libraryItem = item;
+        this.patron = p;
+        this.loanDueDate = d;
+        this.loanStatus = LoanStatus.NORMAL;
+    }
 
 
 

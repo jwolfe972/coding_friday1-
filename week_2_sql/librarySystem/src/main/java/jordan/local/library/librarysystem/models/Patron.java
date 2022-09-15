@@ -41,11 +41,29 @@ public class Patron {
     @Enumerated(EnumType.ORDINAL)
     private PatronStatus patronStatus = PatronStatus.NORMAL;
 
+
+
+
+
+
+
+    @Column(name = "inUser", nullable = false)
+    private boolean inUse = true;
+
     public Patron(String fname, String lname){
 
 
         this.patronFirstName = fname;
         this.patronLastName = lname;
+
+    }
+
+
+    public boolean isEligible(){
+
+
+        return this.inUse && this.balance == 0.00 && this.patronStatus == PatronStatus.NORMAL && this.numberOfRentedItems <= 5;
+
 
     }
 
