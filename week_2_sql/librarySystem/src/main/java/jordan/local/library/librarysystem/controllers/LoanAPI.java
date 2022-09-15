@@ -12,6 +12,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -82,6 +83,84 @@ public class LoanAPI {
 
 
     }
+
+
+//    @PostMapping("/report-lost")
+//    public ResponseEntity<?> reportItemLost(@RequestParam("loanID") Long loanID){
+//
+//
+//
+//
+//
+//
+//    }
+
+
+    @GetMapping("/all-Overdue")
+    public ResponseEntity<List<LibraryItem>> getAllOverdue(){
+
+
+
+        return new ResponseEntity<>(loanService.allOverDue(), HttpStatus.OK);
+    }
+
+
+    @GetMapping("patrons-checked")
+    public ResponseEntity<?> getAllDueByPatron(@RequestParam("patronID") Long patronID){
+
+
+        Optional<Patron> patron = patronService.findPatronByID(patronID);
+
+
+
+
+        if(patron.isPresent()){
+
+
+            return new ResponseEntity<>(loanService.getAllItemsOwedByPatron(patron.get()), HttpStatus.OK);
+        }
+
+
+
+        return new ResponseEntity<>("Patron ID is not valid", HttpStatus.BAD_REQUEST);
+
+
+    }
+
+    @PostMapping("/recheck-out")
+    public ResponseEntity<?> recheckItem(@RequestParam("loanID") Long loanID){
+
+
+        Optional<Loans> loans = loanService.findLoanByID(loanID);
+
+
+        if(loans.isPresent()){
+
+            Loans loanOut = loanService.recheckOutItem(loans.get());
+
+
+            if(loanOut != null){
+
+
+                return new ResponseEntity<>(loanOut, HttpStatus.OK);
+
+
+            }
+
+
+
+
+
+
+
+        }
+
+
+
+        return new ResponseEntity<>("Invalid Recheck", HttpStatus.OK);
+    }
+
+
 
 
 

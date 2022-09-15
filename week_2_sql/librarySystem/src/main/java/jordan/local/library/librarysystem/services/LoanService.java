@@ -11,10 +11,7 @@ import jordan.local.library.librarysystem.repos.LoanRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 
 @Service
 public class LoanService {
@@ -191,28 +188,18 @@ public class LoanService {
 
     }
 
-    public List<LibraryItem> getAllItemsOwedByPatron(Patron p){
+    public List<Loans> getAllItemsOwedByPatron(Patron p){
 
 
-        List<Loans> loansByPatron = loanRepo.findAllByPatron(p);
+        return loanRepo.findAllByPatron(p);
 
 
-        List<LibraryItem> allItems = new ArrayList<>();
+    }
+
+    public Optional<Loans> findLoanByID(Long id){
 
 
-
-        for(Loans l: loansByPatron){
-
-            allItems.add(l.getLibraryItem());
-
-
-
-        }
-
-
-        return allItems;
-
-
+        return loanRepo.findById(id);
     }
 
     public List<LibraryItem> allOverDue(){
