@@ -80,8 +80,21 @@ public class PatronService {
 
         p.setBalance(balance);
 
+        if(balance > 0){
 
-//
+
+
+            p.setPatronStatus(PatronStatus.FINED);
+        }
+
+        else {
+
+
+            p.setPatronStatus(PatronStatus.NORMAL);
+        }
+
+
+
 //        if(balance == 0.00){
 //
 //
@@ -98,7 +111,7 @@ public class PatronService {
 
 
 
-        return paymentAmount - balance;
+        return balance - paymentAmount;
 
 
 
@@ -109,45 +122,64 @@ public class PatronService {
     }
 
 
-    public Map<Patron, Double> payFines(Patron p, double payment){
-
-        Map<Patron, Double> returnOut = new HashMap<>();
-
-        double amountAfter = getAfterPaymentBalance(p.getBalance(), payment);
+    public String payFines(Patron p, double payment){
 
 
 
-        if(amountAfter > 0.00){
+        if(p.getBalance() > 0){
 
 
-            p.setBalance(amountAfter);
-            Patron retP = patronRepo.save(p);
-
-            returnOut.put(retP, (amountAfter*-1) );
-
-
-            return returnOut;
+            double amountAfter = getAfterPaymentBalance(p.getBalance(), payment);
 
 
 
-
-        }else  {
-
-            p.setBalance(0.00);
-            p.setPatronStatus(PatronStatus.NORMAL);
+            if(amountAfter > 0.00){
 
 
-
-            Patron returnP = patronRepo.save(p);
-
-            returnOut.put(returnP, (amountAfter * -1));
+                p.setBalance(amountAfter);
 
 
-            return returnOut;
+                patronRepo.save(p);
+
+                return "There are still fines of " + amountAfter + " to patron " + p.getPatronFirstName() + " " + p.getPatronLastName();
+
+
+
+
+            }else  {
+
+
+
+
+                p.setBalance(0.00);
+                p.setPatronStatus(PatronStatus.NORMAL);
+
+
+
+                patronRepo.save(p);
+
+
+                if(amountAfter < 0)
+                        return "Fines cleared!!!" + " please give a refund of "  + -1*amountAfter;
+
+                return "Fines cleared!!!";
+
+
+
+            }
+
+
+
+
+
 
 
 
         }
+
+
+        return "There is no fine balance to pay";
+
 
 
     }

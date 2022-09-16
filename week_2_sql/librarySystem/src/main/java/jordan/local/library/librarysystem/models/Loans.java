@@ -39,6 +39,7 @@ public class Loans {
 
 
     @Column(name = "status", nullable = false )
+    @Enumerated(EnumType.ORDINAL)
     private LoanStatus loanStatus;
 
 

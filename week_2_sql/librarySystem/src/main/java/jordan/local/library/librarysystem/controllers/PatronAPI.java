@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -87,16 +88,6 @@ public class PatronAPI {
 
 
 
-
-
-
-
-
-
-
-
-
-
     }
 
 
@@ -118,6 +109,41 @@ public class PatronAPI {
 
 
     }
+
+    @PutMapping("/edit-balance")
+    public ResponseEntity<?> editBalance(@RequestParam("patronID") Long patronID, @RequestParam("balance") double balance){
+
+        Optional<Patron> patron = patronService.findPatronByID(patronID);
+
+
+
+        if(patron.isPresent()){
+
+
+
+            Patron p = patronService.editBalance(patron.get(), balance);
+
+
+
+            return new ResponseEntity<>(p, HttpStatus.OK);
+
+
+
+
+
+
+        }
+
+
+
+
+        return new ResponseEntity<>("Operation to edit balance failed", HttpStatus.OK);
+
+
+
+
+    }
+
 
 
     @PutMapping("/edit-name")
@@ -144,6 +170,32 @@ public class PatronAPI {
 
 
 
+    }
+
+
+
+
+    @PostMapping("/pay-balance")
+    public ResponseEntity<?> payBalance(@RequestParam("patronID") Long id, @RequestParam("pay")double paymentAmount){
+
+
+
+        Optional<Patron> patron = patronService.findPatronByID(id);
+
+
+        if(patron.isPresent()){
+
+
+
+            String response = patronService.payFines(patron.get(), paymentAmount);
+
+
+            return new ResponseEntity<>(response, HttpStatus.OK);
+        }
+
+
+
+        return new ResponseEntity<>("Payment failed", HttpStatus.OK);
     }
 
 

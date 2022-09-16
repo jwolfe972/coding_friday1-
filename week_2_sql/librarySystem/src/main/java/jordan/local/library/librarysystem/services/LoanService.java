@@ -163,7 +163,7 @@ public class LoanService {
 
     public Loans checkInItem(LibraryItem item, Patron p) {
 
-        Loans loans = loanRepo.findLoansByLibraryItemAndPatronAndLoanStatusNotContaining(item, p, LoanStatus.COMPLETE);
+        Loans loans = loanRepo.findCheckoutLoan(p.getId(), item.getItemID(), LoanStatus.COMPLETE.ordinal());
 
 
 
@@ -172,7 +172,16 @@ public class LoanService {
 
 
 
+
+
             loans.setLoanStatus(LoanStatus.COMPLETE);
+
+
+            item.setItemStatus(ItemStatus.IN_STOCK);
+            p.setNumberOfRentedItems(p.getNumberOfRentedItems() -1);
+
+            libraryItemService.updateItem(item);
+            patronService.updatePatron(p);
 
 
             return loanRepo.save(loans);

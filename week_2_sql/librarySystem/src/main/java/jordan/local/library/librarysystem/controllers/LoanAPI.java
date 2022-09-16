@@ -161,6 +161,44 @@ public class LoanAPI {
     }
 
 
+    @PutMapping("/check-in")
+    public ResponseEntity<?> checkIn(@RequestParam("patronID") Long patronID, @RequestParam("itemID") Long itemID){
+
+
+
+        Optional<Patron> p = patronService.findPatronByID(patronID);
+        LibraryItem libraryItem = libraryItemService.findItemByID(itemID);
+
+
+        if(p.isPresent() && libraryItem != null){
+
+
+            Loans l = loanService.checkInItem(libraryItem, p.get());
+
+
+            if(l != null){
+
+
+
+                return new ResponseEntity<>(l, HttpStatus.OK);
+            }
+
+
+
+
+
+        }
+
+
+        return new ResponseEntity<>("There was a problem receiving the loan information", HttpStatus.OK);
+
+
+
+
+
+    }
+
+
 
 
 

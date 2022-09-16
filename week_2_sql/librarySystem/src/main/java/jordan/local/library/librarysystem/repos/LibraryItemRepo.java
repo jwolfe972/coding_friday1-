@@ -4,6 +4,7 @@ import jordan.local.library.librarysystem.enums.ItemStatus;
 import jordan.local.library.librarysystem.models.AudioCDs;
 import jordan.local.library.librarysystem.models.LibraryItem;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
@@ -15,5 +16,6 @@ public interface LibraryItemRepo extends JpaRepository<LibraryItem, Long> {
 
 
     List<LibraryItem> findAllByItemStatus(ItemStatus status);
+
 
 }
