@@ -195,6 +195,12 @@ public class PatronService {
 
     }
 
+    public List<Patron> getByLastName(String lname){
+
+
+        return patronRepo.findAllByPatronLastNameContainingIgnoreCase(lname);
+    }
+
 
 
 

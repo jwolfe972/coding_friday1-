@@ -16,4 +16,14 @@ public interface PatronRepo extends JpaRepository<Patron, Long> {
 
 
 
+
+    List<Patron> findAllByPatronLastNameContainingIgnoreCase(String lname);
+
+
+
+
+
+
+
+
 }

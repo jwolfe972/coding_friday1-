@@ -8,6 +8,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.util.Date;
+import java.util.List;
 
 @SpringBootApplication
 public class LibrarySystemApplication  implements CommandLineRunner {
@@ -39,18 +40,27 @@ public class LibrarySystemApplication  implements CommandLineRunner {
 
 
 
+
+
        LibraryItem s =  audioCDService.addCD("dd", "ss", 12, new Date(), "sfefews", 22.00, 10);
 
        LibraryItem b =  bookService.addBook("Jordan", "Wolfe", "non-fiction", 34.44, 20, new Date(), "Breathe of Fresh Air" );
 
-//
         Patron p = patronService.addPatron(new Patron("Jordan", "Wolfe"));
-//
-//
-//
-//        loanService.checkOutAnItem(p, s );
 
 
+
+
+
+        List<Patron> allLastName = patronService.getByLastName("Wolfe");
+
+
+
+        for(Patron pat: allLastName ){
+
+
+            System.out.println(pat.getPatronStatus());
+        }
 
 
 

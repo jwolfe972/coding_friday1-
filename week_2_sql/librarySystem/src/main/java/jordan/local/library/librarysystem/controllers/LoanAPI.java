@@ -65,9 +65,6 @@ public class LoanAPI {
 
 
 
-
-
-
             }
 
 
@@ -77,23 +74,7 @@ public class LoanAPI {
         return new ResponseEntity<>("Loan not availble", HttpStatus.BAD_REQUEST);
 
 
-
-
-
-
-
     }
-
-
-//    @PostMapping("/report-lost")
-//    public ResponseEntity<?> reportItemLost(@RequestParam("loanID") Long loanID){
-//
-//
-//
-//
-//
-//
-//    }
 
 
     @GetMapping("/all-Overdue")
@@ -193,15 +174,7 @@ public class LoanAPI {
         return new ResponseEntity<>("There was a problem receiving the loan information", HttpStatus.OK);
 
 
-
-
-
     }
-
-
-
-
-
 
 
 }
