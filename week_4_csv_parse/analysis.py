@@ -174,7 +174,7 @@ def generateGraph(data, year):
     plt.title(f'Draft class {year} analysis ppg')
 
     plt.savefig(f"{year}_DraftClass_PPG_Averages.pdf", format="pdf", bbox_inches="tight")
-    plt.show()
+    # plt.show()
     
 def generateCareerPointAverages(statsInfo):
     careerPoints = {}
@@ -224,7 +224,7 @@ def generateBarGraphForTop(data, year, number=10):
     plt.ylabel("PPG Career Average")
     plt.title(f"Top {number} Career PPG {year} Draft Class")
     plt.savefig(f"{year}_Top{number}_Career_PPG.pdf", format="pdf", bbox_inches="tight")
-    plt.show()
+    # plt.show()
         
     
 
