@@ -1,0 +1,18 @@
+This week we will be going over parsing csv data using python!
+
+
+
+
+
+
+
+Requirements:
+
+
+Python 3
+Mac Users --> HomeBrew
+Windows Users --> WSL Ubuntu Distro
+Cobc (Cobol to C Compiler)
+
+Windows --> https://youtu.be/lMO9JAtoj3U
+HomeBrew (Mac OS) --> https://youtu.be/DZwx7yV_iyE
