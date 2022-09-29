@@ -16,3 +16,7 @@ Cobc (Cobol to C Compiler)
 
 Windows --> https://youtu.be/lMO9JAtoj3U
 HomeBrew (Mac OS) --> https://youtu.be/DZwx7yV_iyE
+
+(Optional) MySQL and MySqlWorkbench:
+Windows: https://youtu.be/2c2fUOgZMmY
+Mac: https://youtu.be/DVVVSlGDpuw
