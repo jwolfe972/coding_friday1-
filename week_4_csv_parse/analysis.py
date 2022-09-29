@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 import csv
-
+import operator
 def getPlayerTableInMemory():
     players = {}
     with open('players.csv', 'r') as dataFile:
@@ -175,6 +175,58 @@ def generateGraph(data, year):
 
     plt.savefig(f"{year}_DraftClass_PPG_Averages.pdf", format="pdf", bbox_inches="tight")
     plt.show()
+    
+def generateCareerPointAverages(statsInfo):
+    careerPoints = {}
+    player_id = -1
+
+
+    for item in statsInfo:
+        totalPoints = 0
+        for statYear in item:
+            totalPoints += float(statYear['pts'])
+            
+        careerPoints[statYear['player_id']] = round(totalPoints / len(item), 2)
+            # if statYear['player_id'] not in careerPoints:
+            # else:
+            #     careerPoints[statYear['player_id']].append(
+            #         (float(statYear['pts']), int(statYear['season']))
+
+            #     )
+
+
+
+    return careerPoints
+
+def generateBarGraphForTop(data, year, number=10):
+    xList = []
+    yList = []
+    f = plt.figure()
+    f.set_figwidth(20)
+    f.set_figheight(10)
+    count = 0
+    
+    
+    sorted_d = dict( sorted(data.items(), key=operator.itemgetter(1),reverse=True))
+    
+    for item in sorted_d:
+        
+        
+        if(count == number):
+            break
+        xList.append(f'{playerInfo[item]["player_first_name"]} {playerInfo[item]["player_last_name"]}')
+        yList.append(data[item])
+        count += 1
+        
+    plt.bar(xList, yList, color='maroon', width=0.5)
+    
+    plt.xlabel("Player")
+    plt.ylabel("PPG Career Average")
+    plt.title(f"Top {number} Career PPG {year} Draft Class")
+    plt.savefig(f"{year}_Top{number}_Career_PPG.pdf", format="pdf", bbox_inches="tight")
+    plt.show()
+        
+    
 
 
 
@@ -208,8 +260,10 @@ if __name__ == "__main__":
     playerStatInfo = getplayerStatsInfo()
     draftClassInfo = generateDraftClassData('2009')
     cp = generateCareerPointAveragesByYear(draftClassInfo)
-
+    bp = generateCareerPointAverages(draftClassInfo)
     generateGraph(cp, 2009)
+    
+    generateBarGraphForTop(bp, 2009, number=5)
 
 
 
