@@ -49,9 +49,14 @@
        01 LIVE-VARIABLES.
           05 EOF                           PIC X VALUE 'N'.
           05 NUM-PLAYERS-CLASS             PIC 999 VALUE 0.
-          05 AVG-HOLDER                    PIC 9(2)V99 VALUE 0.
+          05 AVG-HOLDER-PT                    PIC 9(4)V99 VALUE 0.
+          05 AVG-HOLDER-REB                    PIC 9(4)V99 VALUE 0.
+          05 AVG-HOLDER-AST                    PIC 9(4)V99 VALUE 0.
           05 NUM-YEARS                     PIC 99 VALUE 0.
           05 CURR-ID                       PIC XXXX VALUE 'NONE'.
+          05 SEASON-COUNT                  PIC 99 VALUE 0.
+          05 FNAME-HOLD                    PIC X(12) VALUE SPACES.
+          05 LNAME-HOLD                    PIC X(18) VALUE SPACES.
        01 OUTPUT-PARM.
            05 F-NAME-OT              PIC X(12).
            05 FILLER                  PIC XX VALUE SPACES.
@@ -80,6 +85,17 @@
            05 AST-OT                  PIC 9(2).99.
            05 FILLER                  PIC XX VALUE SPACES.
            05 SEASON-OT               PIC 9(4).
+
+       01  PLAYER-REPORT.
+           05 FNAME-REP               PIC X(12).
+           05 FILLER                  PIC XX VALUE SPACES.
+           05 LNAME-REP               PIC X(18).
+           05 FILLER                  PIC XX VALUE SPACES.
+           05 AVG-PT                  PIC 99.99.
+           05 FILLER                  PIC XX VALUE SPACES.
+           05 AVG-REB                 PIC 99.99.
+           05 FILLER                  PIC XX VALUE SPACES.
+           05 AVG-AST                 PIC 99.99.
            
        
 
@@ -101,22 +117,48 @@
                  AT END MOVE 'Y' TO EOF
               END-READ.
 
+
+
+           110-REPORT-PLAYER.
+              MOVE FNAME-HOLD  TO FNAME-REP
+              MOVE LNAME-HOLD  TO LNAME-REP
+              COMPUTE AVG-PT = (AVG-HOLDER-PT / SEASON-COUNT )
+              COMPUTE AVG-REB  = (AVG-HOLDER-REB / SEASON-COUNT )
+              COMPUTE  AVG-AST = (AVG-HOLDER-AST / SEASON-COUNT )
+              MOVE PLAYER-REPORT TO PRINT-LINE
+              WRITE PRINT-LINE AFTER ADVANCING PAGE .
+
            102-WRITE-FILE.
 
               IF CURR-ID = 'NONE'
                  THEN MOVE ID-VAL TO CURR-ID 
+                 MOVE F-NAME-IN TO FNAME-HOLD
+                 MOVE L-NAME-IN TO LNAME-HOLD
               END-IF.
 
               IF CURR-ID NOT = 'NONE' AND CURR-ID NOT = ID-VAL
-                 THEN MOVE SPACES TO PRINT-LINE
+             
+                 THEN
+
+                  PERFORM 110-REPORT-PLAYER
+                  MOVE SPACES TO PRINT-LINE
                  WRITE PRINT-LINE AFTER ADVANCING PAGE
                  MOVE ID-VAL TO CURR-ID 
+                 MOVE 0 TO AVG-HOLDER-AST 
+                  MOVE 0 TO AVG-HOLDER-PT 
+                   MOVE 0 TO AVG-HOLDER-REB 
+                   MOVE 0 TO SEASON-COUNT
+                   MOVE F-NAME-IN TO FNAME-HOLD 
+                   MOVE L-NAME-IN TO LNAME-HOLD
               END-IF .
 
 
 
 
-              
+              ADD PTS-IN  TO AVG-HOLDER-PT
+              ADD AST-IN  TO AVG-HOLDER-AST 
+              ADD REB-IN  TO AVG-HOLDER-REB
+              ADD 1 TO SEASON-COUNT
               MOVE F-NAME-IN TO F-NAME-OT
               MOVE L-NAME-IN TO L-NAME-OT
               MOVE COLLEGE-IN  TO COLLEGE-OT
@@ -138,11 +180,15 @@
 
 
            105-CLOSE.
-              CLOSE NBA-RECORDS .
-              CLOSE NBA-OUTPUT.
-            
               
-
+           PERFORM 110-REPORT-PLAYER
+           MOVE SPACES TO PRINT-LINE
+           WRITE PRINT-LINE AFTER ADVANCING PAGE
+             CLOSE NBA-RECORDS .
+             CLOSE NBA-OUTPUT.
+           
+             
+      
               
 
 

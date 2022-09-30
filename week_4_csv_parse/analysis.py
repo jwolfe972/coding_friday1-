@@ -174,6 +174,7 @@ def generateGraph(data, year):
     plt.title(f'Draft class {year} analysis ppg')
 
     plt.savefig(f"{year}_DraftClass_PPG_Averages.pdf", format="pdf", bbox_inches="tight")
+    plt.close()
     # plt.show()
     
 def generateCareerPointAverages(statsInfo):
@@ -224,6 +225,7 @@ def generateBarGraphForTop(data, year, number=10):
     plt.ylabel("PPG Career Average")
     plt.title(f"Top {number} Career PPG {year} Draft Class")
     plt.savefig(f"{year}_Top{number}_Career_PPG.pdf", format="pdf", bbox_inches="tight")
+    plt.close()
     # plt.show()
         
     
@@ -256,14 +258,17 @@ def generateBarGraphForTop(data, year, number=10):
 
 
 if __name__ == "__main__":
+    # for i in range(1995, 2022):
+    #     value = str(i)
+    value = '2011'
     playerInfo = getPlayerTableInMemory()
     playerStatInfo = getplayerStatsInfo()
-    draftClassInfo = generateDraftClassData('2009')
+    draftClassInfo = generateDraftClassData(value)
     cp = generateCareerPointAveragesByYear(draftClassInfo)
     bp = generateCareerPointAverages(draftClassInfo)
-    generateGraph(cp, 2009)
+    # generateGraph(cp, value)
     
-    generateBarGraphForTop(bp, 2009, number=5)
+    generateBarGraphForTop(bp, value, number=7)
 
 
 
