@@ -24,34 +24,26 @@ public class PongListener extends ListenerAdapter {
     public void onMessageReceived(MessageReceivedEvent event)
     {
         if (event.getAuthor().isBot()) return;
-        // We don't want to respond to other bot accounts, including ourself
+
         Message message = event.getMessage();
         String content = message.getContentRaw();
 
         String [] wordArgs = content.split(" ");
 
-
-        if(wordArgs.length < 2 || !wordArgs[0].equals("!play")){
-
-            event.getChannel().sendMessage("Incorrect usage!!\n Ex: '!play <name of song and artist>'").queue();
+        if(wordArgs[0].equals("!play")){
 
 
+            if(wordArgs.length < 2 ){
 
-        }else {
+                event.getChannel().sendMessage("Incorrect usage!!\n Ex: '!play <name of song and artist>'").queue();
 
 
 
-
-            if(!event.getMember().getVoiceState().inAudioChannel()){
-
-
-                event.getChannel().sendMessage("You need to be in a voice channel for this command to work").queue();
             }else {
 
 
                 final AudioManager audioManager = event.getGuild().getAudioManager();
                 final VoiceChannel voiceChannel = (VoiceChannel) event.getMember().getVoiceState().getChannel();
-
 
 
                 audioManager.openAudioConnection(voiceChannel);
@@ -73,16 +65,22 @@ public class PongListener extends ListenerAdapter {
                     link = "ytsearch:" + link + " audio";
                 }
 
-                SongPlayer.getInstance().playSong(event.getGuild().getTextChannelById("CHAT ID"));
-                SongPlayer.getInstance().loadToPlay(event.getGuild().getTextChannelById("CHAT ID"), link );
-
+                SongPlayer.getInstance().playSong(event.getGuild().getTextChannelById("1019484127394807860"));
+                SongPlayer.getInstance().loadToPlay(event.getGuild().getTextChannelById("1019484127394807860"), link );
 
 
             }
 
 
 
+        }else {
+
+
+            return;
         }
+
+
+
 
 
     }
@@ -119,21 +117,26 @@ public class PongListener extends ListenerAdapter {
 
 
                 case "skipsong":
-                    SongPlayer.getInstance().skipSong(event.getGuild().getTextChannelById("CHAT ID"));
-                    SongPlayer.getInstance().playSong(event.getGuild().getTextChannelById("CHAT ID"));
-                    AudioTrack currentTrack = SongPlayer.getInstance().getCurrentTrack(event.getGuild().getTextChannelById("CHAT ID"));
-                    event.reply("Song has been skipped!\nNow playing: "+ currentTrack.getInfo().title + " by: " + currentTrack.getInfo().author ).queue();
+                    SongPlayer.getInstance().skipSong(event.getGuild().getTextChannelById("1019484127394807860"));
+                    SongPlayer.getInstance().playSong(event.getGuild().getTextChannelById("1019484127394807860"));
+                    AudioTrack currentTrack = SongPlayer.getInstance().getCurrentTrack(event.getGuild().getTextChannelById("1019484127394807860"));
+                    if(currentTrack != null){
+                        event.reply("Song has been skipped!\nNow playing: "+ currentTrack.getInfo().title + " by: " + currentTrack.getInfo().author ).queue();
+                    }   else {
+                        event.reply("Song has been skipped!").queue();
+                    }
+
                     break;
                 case "pausesong":
-                    SongPlayer.getInstance().pauseSong(event.getGuild().getTextChannelById("CHAT ID"));
+                    SongPlayer.getInstance().pauseSong(event.getGuild().getTextChannelById("1019484127394807860"));
                     event.reply("Song has been paused").queue();
                     break;
                 case "playsong":
-                    SongPlayer.getInstance().playSong(event.getGuild().getTextChannelById("CHAT ID"));
+                    SongPlayer.getInstance().playSong(event.getGuild().getTextChannelById("1019484127394807860"));
                     event.reply("Song has resumed playing").queue();
                     break;
                 case "currentsong":
-                     currentTrack = SongPlayer.getInstance().getCurrentTrack(event.getGuild().getTextChannelById("CHAT ID"));
+                     currentTrack = SongPlayer.getInstance().getCurrentTrack(event.getGuild().getTextChannelById("1019484127394807860"));
 
                     if(currentTrack != null){
 
@@ -145,7 +148,7 @@ public class PongListener extends ListenerAdapter {
 
                     break;
                 case "listplaylist":
-                    List<AudioTrack> tracks = SongPlayer.getInstance().getAllTracks(event.getGuild().getTextChannelById("CHAT ID"));
+                    List<AudioTrack> tracks = SongPlayer.getInstance().getAllTracks(event.getGuild().getTextChannelById("1019484127394807860"));
                     String msg = "";
                     int count = 0;
 

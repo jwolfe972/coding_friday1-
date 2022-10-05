@@ -1,0 +1,20 @@
+HELLO, HELLO, HELLO
+
+
+This week for coding friday we will be creating a music discord bot using 
+
+JDA (Java Discord API): https://github.com/DV8FromTheWorld/JDA
+
+
+
+For this make sure to have the following installed:
+
+Discord App Client + an account
+
+
+IntelliJ Idea IDE: https://www.jetbrains.com/idea/download/
+** can get ultimate edition by getting a license using your unt email
+
+
+Java 8 or Java 11 installed: https://www.oracle.com/java/technologies/javase/jdk11-archive-downloads.html
+https://www.oracle.com/java/technologies/javase/javase8u211-later-archive-downloads.html
