@@ -1,0 +1,15 @@
+To play a song and or add to playlist:
+
+
+'!play <name of song and artist>'
+
+
+
+Manage playlist
+
+
+/pausesong --> pause the song
+/playsong --> plays the song
+/skipsong --> skips the song
+/listplaylist --> list all songs in playlist
+/currentsong --> gives detail on current song playing
