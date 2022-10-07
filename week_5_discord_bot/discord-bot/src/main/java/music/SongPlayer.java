@@ -11,11 +11,9 @@ import net.dv8tion.jda.api.entities.Guild;
 import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.LinkedBlockingQueue;
 
 public class SongPlayer {
 
@@ -32,6 +30,8 @@ public class SongPlayer {
         AudioSourceManagers.registerLocalSource(this.audioPlayerManager);
     }
 
+
+
     public GuildMusicManager getMusicManager(Guild guild){
 
         return this.musicManagerMap.computeIfAbsent(guild.getIdLong(), (guildId) -> {
@@ -40,6 +40,16 @@ public class SongPlayer {
             guild.getAudioManager().setSendingHandler(guildMusicManager.getSendHandler());
             return guildMusicManager;
         } );
+    }
+
+    public void setRepeat(TextChannel textChannel, boolean val){
+
+        final GuildMusicManager musicManager = this.getMusicManager(textChannel.getGuild());
+
+        musicManager.trackSongSchedule.repeating = val;
+
+
+
     }
 
     public void skipSong(TextChannel textChannel){
@@ -51,9 +61,18 @@ public class SongPlayer {
         TrackSongSchedule trackSongSchedule = musicManager.trackSongSchedule;
 
 
+        if(trackSongSchedule.shuffle){
 
 
-        trackSongSchedule.playNextTrack();
+            trackSongSchedule.shuffleTrack();
+        }else{
+            trackSongSchedule.playNextTrack();
+        }
+
+
+
+
+
 
 
 
@@ -83,7 +102,7 @@ public class SongPlayer {
 
         TrackSongSchedule trackSongSchedule = musicManager.trackSongSchedule;
 
-        BlockingQueue<AudioTrack> audioTracks = trackSongSchedule.getFullList();
+        LinkedList<AudioTrack> audioTracks = trackSongSchedule.getFullList();
 
 
         List<AudioTrack> tracks = new ArrayList<>(audioTracks);
@@ -108,22 +127,45 @@ public class SongPlayer {
         trackSongSchedule.playTrack();
     }
 
+    public void playNextTrack(TextChannel textChannel, int element){
+
+        final GuildMusicManager musicManager = this.getMusicManager(textChannel.getGuild());
+
+
+
+        TrackSongSchedule trackSongSchedule = musicManager.trackSongSchedule;
+
+
+        trackSongSchedule.playNextTrack(element);
 
 
 
 
-    public void loadToPlay(TextChannel textChannel, String youtubeURL){
+
+
+
+    }
+
+
+
+
+
+    public void loadToPlay(TextChannel textChannel, String youtubeURL, boolean playlist){
 
 
         final GuildMusicManager musicManager = this.getMusicManager(textChannel.getGuild());
 
 
-        this.audioPlayerManager.loadItemOrdered(musicManager, youtubeURL, new AudioLoadResultHandler() {
+        this.audioPlayerManager.loadItemOrdered(musicManager, youtubeURL.trim(), new AudioLoadResultHandler() {
             @Override
             public void trackLoaded(AudioTrack audioTrack) {
+
+
                 musicManager.trackSongSchedule.queueSong(audioTrack);
 
-                textChannel.sendMessage(String.format("Adding song to queue**\nTitle: %s\n**by**\n%s", audioTrack.getInfo().title, audioTrack.getInfo().author )).queue();
+
+
+                textChannel.sendMessage(String.format("Adding song to queue**\nTitle: %s\n**by**\n%s\n\n%s", audioTrack.getInfo().title, audioTrack.getInfo().author,  audioTrack.getInfo().uri )).queue();
             }
 
             @Override
@@ -132,21 +174,47 @@ public class SongPlayer {
 
                 final List<AudioTrack> tracks = audioPlaylist.getTracks();
 
-                if(!tracks.isEmpty()){
+
+                if(playlist){
+
+
+                    for(AudioTrack track: tracks){
+
+
+                        musicManager.trackSongSchedule.queueSong(track);
+                    }
+
+
+                    textChannel.sendMessage(String.format("Adding %d songs to queue from %s playlist!", tracks.size(), audioPlaylist.getName())).queue();
+
+
+
+                }else {
+
 
                     musicManager.trackSongSchedule.queueSong(tracks.get(0));
-                    textChannel.sendMessage(String.format("Adding song to queue**\nTitle: %s\n**by**\n%s", tracks.get(0).getInfo().title, tracks.get(0).getInfo().author )).queue();
+                    textChannel.sendMessage(String.format("Adding song to queue**\nTitle: %s\n**by**\n%s\n\n%s", tracks.get(0).getInfo().title, tracks.get(0).getInfo().author,  tracks.get(0).getInfo().uri )).queue();
+
+
+
                 }
+
+
 
             }
 
             @Override
             public void noMatches() {
 
+                textChannel.sendMessage("Couldnt find a track from here: " + youtubeURL).queue();
+
             }
 
             @Override
             public void loadFailed(FriendlyException e) {
+
+
+                textChannel.sendMessage("Failed to load track: " + youtubeURL).queue();
 
             }
 
@@ -176,6 +244,27 @@ public class SongPlayer {
         final GuildMusicManager musicManager = this.getMusicManager(textChannel.getGuild());
 
         return musicManager.audioPlayer.getPlayingTrack();
+    }
+
+    public void clearQueue(TextChannel textChannel){
+
+
+        final GuildMusicManager musicManager = this.getMusicManager(textChannel.getGuild());
+
+        musicManager.trackSongSchedule.playList.clear();
+
+
+    }
+
+    public void setShuffle(TextChannel textChannel, boolean val){
+
+        final GuildMusicManager musicManager = this.getMusicManager(textChannel.getGuild());
+
+
+        musicManager.trackSongSchedule.shuffle = val;
+
+
+
     }
 
 

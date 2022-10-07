@@ -1,0 +1,8 @@
+Main.class
+music\SongPlayer.class
+music\TrackSongSchedule.class
+music\AudioSendHandler.class
+music\SongPlayer$1.class
+responders\PongListener.class
+Bot.class
+music\GuildMusicManager.class

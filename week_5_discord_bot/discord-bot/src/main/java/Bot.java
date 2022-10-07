@@ -11,7 +11,7 @@ import java.util.Arrays;
 
 public class Bot {
 
-    public String BOT_TOKEN = "BOT TOKEN";
+    public String BOT_TOKEN = "BOT ID";
     private  JDA jda;
     private Guild guild;
     public  GatewayIntent[] INTENTS = {GatewayIntent.DIRECT_MESSAGES, GatewayIntent.GUILD_MESSAGES, GatewayIntent.MESSAGE_CONTENT, GatewayIntent.GUILD_VOICE_STATES, GatewayIntent.GUILD_MESSAGE_REACTIONS, GatewayIntent.GUILD_MEMBERS, GatewayIntent.GUILD_PRESENCES};
@@ -23,7 +23,7 @@ public class Bot {
 
             this.jda = giveBackJDA();
 
-            this.guild = this.jda.getGuildById("GUILD ID");
+            this.guild = this.jda.getGuildById("GUID ID");
             if(guild != null){
 
 
@@ -33,6 +33,11 @@ public class Bot {
                 guild.upsertCommand("playsong", "plays song in the music channel").queue();
                 guild.upsertCommand("currentsong", "gives information on the current song being played").queue();
                 guild.upsertCommand("listplaylist", "lists the contents of the entire playlist").queue();
+                guild.upsertCommand("repeat", "repeats all tracks playing").queue();
+                guild.upsertCommand("repeatoff", "turns off the repeat effect" ).queue();
+                guild.upsertCommand("clear", "this command clears the current music queue").queue();
+                guild.upsertCommand("shuffle", "shuffle the current playlist").queue();
+                guild.upsertCommand("offshuffle", "turn the shuffle feature off").queue();
 
             }
 
@@ -57,7 +62,7 @@ public class Bot {
                 .enableIntents(Arrays.asList(INTENTS))
                 .enableCache(CacheFlag.VOICE_STATE)
                 .setStatus(OnlineStatus.ONLINE)
-                .setActivity(Activity.playing("Spiderman ps4 AKA GOTY"))
+                .setActivity(Activity.playing("Playing the best tunes"))
                 .addEventListeners(new PongListener())
                 .build().awaitReady();
     }
