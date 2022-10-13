@@ -1,0 +1,15 @@
+This week we will be hosting a BioMedical Enginerring based 
+Coding Friday
+
+
+We will be creating a Flask application for entering
+data to calculate blood pressure level of 'patients'
+
+
+
+
+Tech Needed:
+
+Python 3
+Matplotlib
+Flask
