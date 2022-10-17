@@ -13,6 +13,7 @@ and *2:00 pm - 3:30 pm* in **seperate** session which are copies of eachother
 ![Python ](https://img.shields.io/badge/IntelliJ_IDE-blue.svg)
 ![Python ](https://img.shields.io/badge/Ubuntu-red.svg)
 ![Python ](https://img.shields.io/badge/Flask-lightgrey.svg)
+![Python ](https://img.shields.io/badge/ThymeLeaf-pink.svg)
 
 
 
