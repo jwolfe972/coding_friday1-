@@ -67,6 +67,7 @@ technology to serve it as webpages for users. We also touched on some SQL concep
 ![Python ](https://img.shields.io/badge/SQL-green.svg)
 ![Python ](https://img.shields.io/badge/Ubuntu-red.svg)
 ![Python ](https://img.shields.io/badge/MatplotLib-lightgrey.svg)
+![Python ](https://img.shields.io/badge/Bash_Scripting-lightblue.svg)
 
 
 
