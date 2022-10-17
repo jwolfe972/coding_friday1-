@@ -1,8 +1,8 @@
 
 # Coding Friday
 
-A weekly coding tutorial series every friday from 12:30 pm - 2:00 pm
-and 2:00 pm - 3:30 pm
+A weekly coding tutorial series every friday from *12:30 pm - 2:00 pm*
+and *2:00 pm - 3:30 pm* in **seperate** session which are copies of eachother
 
 
 ### Week 1
@@ -48,8 +48,14 @@ technology to serve it as webpages for users. We also touched on some SQL concep
 
 ### Week 3
 
+![Python ](https://img.shields.io/badge/Rest-blueviolet.svg)
+![Python ](https://img.shields.io/badge/Catch_up_on_HW-lightgrey.svg)
+![Python ](https://img.shields.io/badge/Video_Games-green.svg)
 
-No coding friday this week :(
+
+**No coding friday this week :(**
+
+*Will be back next week!*
 
 
 ### Week 4
@@ -110,6 +116,29 @@ This essentially creates a joint playlist among the discord server allowing for 
 
 To celebrate BMEN week for this week we are creating a simple **Flask** app using **Python3** that will allow for users
 to fill out a form that will then return back to them their current blood pressure status. It will then add it to a csv file that can then be used by an analysis python script to generate a graph of all users in the csv.
+
+
+### Week 7
+
+![Python ](https://img.shields.io/badge/Rest-blueviolet.svg)
+![Python ](https://img.shields.io/badge/Catch_up_on_HW-lightgrey.svg)
+![Python ](https://img.shields.io/badge/Video_Games-green.svg)
+
+Because of NSBEHack begining this Friday:
+
+**No coding friday this week :(**
+
+
+Make sure to sign up for NSBEHack and to receive more information check on our website:
+https://untnsbepresident.wixsite.com/my-site
+
+
+*Will be back next week!*
+
+
+
+
+
 
 
 
