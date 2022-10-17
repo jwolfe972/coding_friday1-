@@ -92,3 +92,22 @@ This essentially creates a joint playlist among the discord server allowing for 
 
 
 
+### Week 6
+
+
+![Python ](https://img.shields.io/badge/Python_3-blueviolet.svg)
+![Python ](https://img.shields.io/badge/Flask-yellow.svg)
+![Python ](https://img.shields.io/badge/MathPlotLib-blue.svg)
+![Python ](https://img.shields.io/badge/Numpy-red.svg)
+
+
+
+
+
+#### Description
+
+To celebrate BMEN week for this week we are creating a simple **Flask** app using **Python3** that will allow for users
+to fill out a form that will then return back to them their current blood pressure status. It will then add it to a csv file that can then be used by an analysis python script to generate a graph of all users in the csv.
+
+
+
