@@ -6,7 +6,7 @@ and 2:00 pm - 3:30 pm
 
 
 ### Week 1
-Requirements:
+
 ![Python ](https://img.shields.io/badge/Python_3-green.svg)
 ![Python ](https://img.shields.io/badge/Java_8-blueviolet.svg)
 ![Python ](https://img.shields.io/badge/SpringBoot-yellow.svg)
@@ -25,7 +25,7 @@ Also I allowed for you all to make Requests to another API that I created in **S
 
 ### Week 2
 
-Requirements:
+
 ![Python ](https://img.shields.io/badge/Java_8-blueviolet.svg)
 ![Python ](https://img.shields.io/badge/SpringBoot-yellow.svg)
 ![Python ](https://img.shields.io/badge/MySQL_Workbench-blue.svg)
@@ -40,6 +40,13 @@ This week we worked on creating a library loan system using **SpringBoot**
 and **MySQL Workbench** as our database. This system also uses API routes for making changes.
 In future installments of this program it should use maybe **Thymeleaf** or another front-end
 technology to serve it as webpages for users. We also touched on some SQL concepts in writing queries
+
+
+
+### Week 3
+
+
+No coding friday this week :(
 
 
 
