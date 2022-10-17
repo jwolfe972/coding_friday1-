@@ -123,6 +123,7 @@ to fill out a form that will then return back to them their current blood pressu
 ![Python ](https://img.shields.io/badge/Rest-blueviolet.svg)
 ![Python ](https://img.shields.io/badge/Catch_up_on_HW-lightgrey.svg)
 ![Python ](https://img.shields.io/badge/Video_Games-green.svg)
+![Python ](https://img.shields.io/badge/NSBHack-red.svg)
 
 Because of NSBEHack begining this Friday:
 
