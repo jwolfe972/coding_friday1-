@@ -3,6 +3,11 @@
 
 A weekly coding tutorial series every friday from *12:30 pm - 2:00 pm*
 and *2:00 pm - 3:30 pm* in **seperate** session which are copies of eachother
+As always no coding experience is required and these sessions are catered towards
+individuals who are seeking to be introduced to new things.
+
+The goal for each session is to leave with a project that you can then add to and 
+improve
 
 
 ### Week 1
