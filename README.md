@@ -153,6 +153,26 @@ For this week make sure to check out NSBEHack event going down this
 
 *Will be back next week!*
 
+### Week 8
+
+
+![Python ](https://img.shields.io/badge/Java_8-blueviolet.svg)
+![Python ](https://img.shields.io/badge/SpringBoot-yellow.svg)
+![Python ](https://img.shields.io/badge/Maven-blue.svg)
+![Python ](https://img.shields.io/badge/Thymeleaf-red.svg)
+
+
+
+
+
+#### Description
+
+We will be creating an online game (text based game) in Java Springboot that will allow for users to queue for a game
+and play the game. More Details will be given TBA.
+
+
+
+
 
 
 
