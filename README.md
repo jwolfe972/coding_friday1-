@@ -134,6 +134,22 @@ Make sure to sign up for NSBEHack and to receive more information check on our w
 https://untnsbepresident.wixsite.com/my-site
 
 
+
+For this week make sure to check out NSBEHack event going down this
+**Friday** and **Saturday**
+
+
+**There will be 3 challenges!!!**
+
+    SOFTWARE
+    PRESENTATION
+    PRODUCT DESIGN
+
+
+**PRIZE POOL:**
+    *3 1st ($200), 3 2nd ($100), 3 3rd ($75)*
+
+
 *Will be back next week!*
 
 
