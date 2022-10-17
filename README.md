@@ -12,6 +12,7 @@ and 2:00 pm - 3:30 pm
 ![Python ](https://img.shields.io/badge/SpringBoot-yellow.svg)
 ![Python ](https://img.shields.io/badge/IntelliJ_IDE-blue.svg)
 ![Python ](https://img.shields.io/badge/Ubuntu-red.svg)
+![Python ](https://img.shields.io/badge/Flask-lightgrey.svg)
 
 
 
@@ -59,6 +60,7 @@ No coding friday this week :(
 ![Python ](https://img.shields.io/badge/MySQL_Workbench-blue.svg)
 ![Python ](https://img.shields.io/badge/SQL-green.svg)
 ![Python ](https://img.shields.io/badge/Ubuntu-red.svg)
+![Python ](https://img.shields.io/badge/MatplotLib-lightgrey.svg)
 
 
 
