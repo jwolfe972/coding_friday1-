@@ -69,7 +69,26 @@ No coding friday this week :(
 This week we walk through performing some surface-level analysis on some NBA data acquired from Kaggle. 
 The data are yearly stats for every player, every year since **1996**. We walk through parsing the CSV Data
 to seperate the csv into relational tables through CSVs that can be imported into **MySQL Workbench** to allow for analysis through SQL. We then performed the analysis on the data in python using **Matplotlib** to create graphs to convey player's
-career stats grouped by their draft class. We then also used COBC, which is a command line COBOL compiler for compiling cobol to perform analysis as well after using a python primer for the data.
+career stats grouped by their draft class. We then also used **COBC**, which is a command line COBOL compiler for compiling cobol to perform analysis as well after using a python primer for the data.
+
+
+
+### Week 5
+
+
+![Python ](https://img.shields.io/badge/Java_8-blueviolet.svg)
+![Python ](https://img.shields.io/badge/Maven-yellow.svg)
+![Python ](https://img.shields.io/badge/Discord-blue.svg)
+
+
+
+
+
+#### Description
+
+This week we use **Java** with **Maven dependencies** to create a music playlist bot that allows for you to issue commands as such
+*"!play 24k magic bruno mars"* and the bot will search youtube for the song and add it enqueue to be played in order through **Discord**. 
+This essentially creates a joint playlist among the discord server allowing for multiple users to listen to and interact with the playlist
 
 
 
