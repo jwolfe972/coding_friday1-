@@ -11,6 +11,7 @@ and 2:00 pm - 3:30 pm
 ![Python ](https://img.shields.io/badge/Java_8-blueviolet.svg)
 ![Python ](https://img.shields.io/badge/SpringBoot-yellow.svg)
 ![Python ](https://img.shields.io/badge/IntelliJ_IDE-blue.svg)
+![Python ](https://img.shields.io/badge/Ubuntu-red.svg)
 
 
 
@@ -30,6 +31,7 @@ Also I allowed for you all to make Requests to another API that I created in **S
 ![Python ](https://img.shields.io/badge/SpringBoot-yellow.svg)
 ![Python ](https://img.shields.io/badge/MySQL_Workbench-blue.svg)
 ![Python ](https://img.shields.io/badge/SQL-green.svg)
+![Python ](https://img.shields.io/badge/Ubuntu-red.svg)
 
 
 
@@ -47,6 +49,27 @@ technology to serve it as webpages for users. We also touched on some SQL concep
 
 
 No coding friday this week :(
+
+
+### Week 4
+
+
+![Python ](https://img.shields.io/badge/Python_3-blueviolet.svg)
+![Python ](https://img.shields.io/badge/COBC-yellow.svg)
+![Python ](https://img.shields.io/badge/MySQL_Workbench-blue.svg)
+![Python ](https://img.shields.io/badge/SQL-green.svg)
+![Python ](https://img.shields.io/badge/Ubuntu-red.svg)
+
+
+
+
+
+#### Description
+
+This week we walk through performing some surface-level analysis on some NBA data acquired from Kaggle. 
+The data are yearly stats for every player, every year since **1996**. We walk through parsing the CSV Data
+to seperate the csv into relational tables through CSVs that can be imported into **MySQL Workbench** to allow for analysis through SQL. We then performed the analysis on the data in python using **Matplotlib** to create graphs to convey player's
+career stats grouped by their draft class. We then also used COBC, which is a command line COBOL compiler for compiling cobol to perform analysis as well after using a python primer for the data.
 
 
 
