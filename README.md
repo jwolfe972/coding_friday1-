@@ -19,6 +19,7 @@ improve
 ![Python ](https://img.shields.io/badge/Ubuntu-red.svg)
 ![Python ](https://img.shields.io/badge/Flask-lightgrey.svg)
 ![Python ](https://img.shields.io/badge/ThymeLeaf-pink.svg)
+![Python ](https://img.shields.io/badge/VSCode-brown.svg)
 
 
 
@@ -39,6 +40,7 @@ Also I allowed for you all to make Requests to another API that I created in **S
 ![Python ](https://img.shields.io/badge/MySQL_Workbench-blue.svg)
 ![Python ](https://img.shields.io/badge/SQL-green.svg)
 ![Python ](https://img.shields.io/badge/Ubuntu-red.svg)
+![Python ](https://img.shields.io/badge/IntelliJ_IDE-pink.svg)
 
 
 
@@ -74,6 +76,7 @@ technology to serve it as webpages for users. We also touched on some SQL concep
 ![Python ](https://img.shields.io/badge/Ubuntu-red.svg)
 ![Python ](https://img.shields.io/badge/MatplotLib-lightgrey.svg)
 ![Python ](https://img.shields.io/badge/Bash_Scripting-lightblue.svg)
+![Python ](https://img.shields.io/badge/VSCode-brown.svg)
 
 
 
@@ -94,6 +97,7 @@ career stats grouped by their draft class. We then also used **COBC**, which is 
 ![Python ](https://img.shields.io/badge/Java_8-blueviolet.svg)
 ![Python ](https://img.shields.io/badge/Maven-yellow.svg)
 ![Python ](https://img.shields.io/badge/Discord-blue.svg)
+![Python ](https://img.shields.io/badge/IntelliJ_IDE-grey.svg)
 
 
 
@@ -114,7 +118,7 @@ This essentially creates a joint playlist among the discord server allowing for 
 ![Python ](https://img.shields.io/badge/Flask-yellow.svg)
 ![Python ](https://img.shields.io/badge/MathPlotLib-blue.svg)
 ![Python ](https://img.shields.io/badge/Numpy-red.svg)
-
+![Python ](https://img.shields.io/badge/VSCode-green.svg)
 
 
 
