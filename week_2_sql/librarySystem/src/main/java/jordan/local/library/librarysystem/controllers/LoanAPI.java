@@ -45,8 +45,6 @@ public class LoanAPI {
 
         if(libraryItem != null){
 
-
-
             if(patron.isPresent()){
 
 

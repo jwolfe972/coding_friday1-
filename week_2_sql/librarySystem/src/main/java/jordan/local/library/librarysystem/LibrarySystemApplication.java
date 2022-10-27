@@ -1,6 +1,7 @@
 package jordan.local.library.librarysystem;
 
 import jordan.local.library.librarysystem.models.LibraryItem;
+import jordan.local.library.librarysystem.models.Loans;
 import jordan.local.library.librarysystem.models.Patron;
 import jordan.local.library.librarysystem.services.*;
 import org.springframework.boot.CommandLineRunner;
@@ -47,6 +48,10 @@ public class LibrarySystemApplication  implements CommandLineRunner {
        LibraryItem b =  bookService.addBook("Jordan", "Wolfe", "non-fiction", 34.44, 20, new Date(), "Breathe of Fresh Air" );
 
         Patron p = patronService.addPatron(new Patron("Jordan", "Wolfe"));
+
+
+        Loans loans = loanService.checkOutAnItem(p, s);
+            loanService.checkOutAnItem(p,b);
 
 
 

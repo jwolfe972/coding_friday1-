@@ -163,7 +163,46 @@ For this week make sure to check out NSBEHack event going down this
 
 *Will be back next week!*
 
+
+
+
 ### Week 8
+
+![Python ](https://img.shields.io/badge/Power_BI-blueviolet.svg)
+![Python ](https://img.shields.io/badge/SQL-yellow.svg)
+![Python ](https://img.shields.io/badge/CSV-blue.svg)
+
+
+#### Description
+**REPORTING**, **REPORTING**, **REPORTING**
+
+In this week of coding Friday I will be using the throwback csv data from the week 4 csv python parsing
+tutorial, plug it into Power BI and create a dashboard for reporting key averages for players
+
+
+For this week all you will need is Power BI Desktop *can receive a free license using your UNT email address*
+and also the **players.csv** and the **player_stats_info.csv** files which are located in the week 8 directory
+
+
+I look forward to seeing you all and teach you some of the Power BI basics I know
+
+
+
+##### Demo Dashboard that we will create:
+
+
+![DashBoard](/week_8_power_bi/dashboard.png)
+
+
+
+
+
+
+
+
+
+
+### Week 9
 
 
 ![Python ](https://img.shields.io/badge/Java_8-blueviolet.svg)
@@ -179,11 +218,6 @@ For this week make sure to check out NSBEHack event going down this
 
 We will be creating an online game (text based game) in Java Springboot that will allow for users to queue for a game
 and play the game. More Details will be given TBA.
-
-
-### Week 9
-
-![Python ](https://img.shields.io/badge/TBD-blueviolet.svg)
 
 
 #### Description
