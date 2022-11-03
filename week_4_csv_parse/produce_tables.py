@@ -38,6 +38,7 @@ def createPlayersCSV():
                     'draft_round': row[11],
                     'draft_number': row[12],
                 }
+    # readSecondPlayer()
                 
     for player in players:
         playerStorage.append(players[player])
@@ -150,7 +151,30 @@ def createPlayerInfoTable():
     except IOError:
         print('IO ERROR')
         
-
+        
+# def readSecondPlayer():
+#     with open('Player_1950s.csv', 'r') as dataFile:
+#         next(dataFile)
+#         reader = csv.reader(dataFile)
+#         for row in reader:
+#             seperatedName = row[1].upper().split()
+#             lastName = ""
+#             for item in seperatedName[1:]:
+#                 lastName+= str(item) + ' '
+                
+#             if str(row[1].upper().strip() not in players):
+#                 players[row[1]] =  {
+                    
+                    
+#                     'player_id': len(players)+1,
+#                     'player_first_name': seperatedName[0],
+#                     'player_last_name': lastName,
+#                     'college': row[4].upper(),
+#                     'country': row[8],
+#                     'draft_year': ' ',
+#                     'draft_round': ' ',
+#                     'draft_number': ' '
+#                 }
 
 
 if __name__ == "__main__":

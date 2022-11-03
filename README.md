@@ -170,7 +170,7 @@ For this week make sure to check out NSBEHack event going down this
 
 ![Python ](https://img.shields.io/badge/Power_BI-blueviolet.svg)
 ![Python ](https://img.shields.io/badge/SQL-yellow.svg)
-![Python ](https://img.shields.io/badge/CSV-blue.svg)
+![Python ](https://img.shields.io/badge/CSV-red.svg)
 
 
 #### Description
@@ -199,16 +199,13 @@ I look forward to seeing you all and teach you some of the Power BI basics I kno
 
 
 
-
-
-
 ### Week 9
 
 
-![Python ](https://img.shields.io/badge/Java_8-blueviolet.svg)
-![Python ](https://img.shields.io/badge/SpringBoot-yellow.svg)
-![Python ](https://img.shields.io/badge/Maven-blue.svg)
-![Python ](https://img.shields.io/badge/Thymeleaf-red.svg)
+![Python ](https://img.shields.io/badge/Rest-blueviolet.svg)
+![Python ](https://img.shields.io/badge/Study-yellow.svg)
+![Python ](https://img.shields.io/badge/Enjoy_Weather-blue.svg)
+![Python ](https://img.shields.io/badge/Relax-red.svg)
 
 
 
@@ -216,13 +213,9 @@ I look forward to seeing you all and teach you some of the Power BI basics I kno
 
 #### Description
 
-We will be creating an online game (text based game) in Java Springboot that will allow for users to queue for a game
-and play the game. More Details will be given TBA.
+No coding Friday this week, I have a celebration coming up soon and have been busy getting plans ready for it!
 
 
-#### Description
-
-....
 
 
 ### Week 10
@@ -242,13 +235,15 @@ and play the game. More Details will be given TBA.
 ....
 
 ### Week 12
-![Python ](https://img.shields.io/badge/TBD-blueviolet.svg)
+![Python ](https://img.shields.io/badge/Rest-blueviolet.svg)
+![Python ](https://img.shields.io/badge/Thankful-yellow.svg)
+![Python ](https://img.shields.io/badge/Enjoy_Weather-blue.svg)
+![Python ](https://img.shields.io/badge/Relax-red.svg)
 
 
 #### Description
 
-...
-
+No Coding Friday this week (Thanksgiving Break week)
 
 ### Week 13
 ![Python ](https://img.shields.io/badge/TBD-blueviolet.svg)
@@ -256,7 +251,12 @@ and play the game. More Details will be given TBA.
 
 #### Description
 
-...
+FINAL CODING FRIDAY OF THE SEMESTER!!
+It has been great this semester planning these out and teaching you guys!!
+I have also been inspired to learn alot so that I can come and show you all this in the sessions
+
+To celebrate:
+    The final coding friday will be a **contest**, more details will be giving after Thanksgiving!!
 
 
 

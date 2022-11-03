@@ -117,6 +117,10 @@ def readData():
     for player in players:
         for elem in players[player]['stats']:
             playerStorage.append(elem)
+            
+            
+
+    
     
                 
 def writeToCSV(nameOfFile, storage, fieldList):
