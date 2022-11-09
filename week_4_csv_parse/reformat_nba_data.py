@@ -12,6 +12,33 @@ playerFields = ['entry_id', 'player_id', 'player_first_name', 'player_last_name'
 playerStorage = []
 
 
+players_1950s = {}
+
+def read1950Players():
+    with open('Player_1950s.csv', 'r') as dataFile:
+        next(dataFile)
+        reader = csv.reader(dataFile)
+        for row in reader:
+            seperatedName = row[1].upper().split()
+            lastName = ""
+            for item in seperatedName[1:]:
+                lastName += str(item) + " "
+            if str(row[1].upper() not in players_1950s):
+                players_1950s[str(row[1].upper())] = {
+                    
+                    'player_id': int(len(players_1950s))+1,
+                    'player_first_name': seperatedName[0],
+                    'player_last_name': lastName,
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                }
+
+
 
 
 

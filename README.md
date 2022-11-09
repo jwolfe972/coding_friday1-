@@ -219,12 +219,22 @@ No coding Friday this week, I have a celebration coming up soon and have been bu
 
 
 ### Week 10
-![Python ](https://img.shields.io/badge/TBD-blueviolet.svg)
+![Python ](https://img.shields.io/badge/MongoDB-blueviolet.svg)
+![Python ](https://img.shields.io/badge/SpringBoot-yellow.svg)
+![Python ](https://img.shields.io/badge/Java-blue.svg)
+![Python ](https://img.shields.io/badge/Thymeleaf-red.svg)
+
 
 
 #### Description
 
-....
+It is getting closer and closer to exam times for all of us.. Wouldn't it be cool to
+have our own program to generate quizzes based on the questions we give?
+
+Well today that's what we will be creating.
+
+We will be using Java Spring and MongoDB as our DB (NoSQL DB) to allow for more flexible
+binding of our data!!
 
 ### Week 11
 ![Python ](https://img.shields.io/badge/TBD-blueviolet.svg)
