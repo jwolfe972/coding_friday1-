@@ -242,7 +242,7 @@ binding of our data!!
 
 #### Description
 
-....
+no coding Friday this week, havent been feeling my best the past few days...
 
 ### Week 12
 ![Python ](https://img.shields.io/badge/Rest-blueviolet.svg)
