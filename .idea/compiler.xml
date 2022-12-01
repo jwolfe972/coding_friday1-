@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="librarySystem" />
+        <module name="quiz_generator" />
+        <module name="discord-bot" />
+        <module name="flashlight" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="discord-bot" target="1.8" />
+      <module name="flashlight" target="11" />
+      <module name="librarySystem" target="11" />
+      <module name="quiz_generator" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="flashlight" options="-parameters" />
+      <module name="librarySystem" options="-parameters" />
+      <module name="quiz_generator" options="-parameters" />
+    </option>
+  </component>
+</project>

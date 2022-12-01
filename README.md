@@ -256,17 +256,27 @@ binding of our data!!
 No Coding Friday this week (Thanksgiving Break week)
 
 ### Week 13
-![Python ](https://img.shields.io/badge/TBD-blueviolet.svg)
-
+![Python ](https://img.shields.io/badge/Finals-blueviolet.svg)
+![Python ](https://img.shields.io/badge/Explore-red.svg)
+![Python ](https://img.shields.io/badge/Learn-yellow.svg)
+![Python ](https://img.shields.io/badge/Get_Creative-green.svg)
 
 #### Description
 
-FINAL CODING FRIDAY OF THE SEMESTER!!
-It has been great this semester planning these out and teaching you guys!!
-I have also been inspired to learn alot so that I can come and show you all this in the sessions
+For the coding friday this week,
+I have decided that I want you guys to go out and create things on your own based on the learnings from this semester
 
-To celebrate:
-    The final coding friday will be a **contest**, more details will be giving after Thanksgiving!!
+It could be anything, as long as you are grasping these concepts and enjoying the creation process..
+
+
+Also would be cool to go out and rent a cloud DB from Aws, Azure, Google Cloud, etc.
+and to experiment with it and other services the cloud platform has to offer!!
+
+
+Please Email me: jordanwolfe2@my.untdallas.edu if you would like any recommendations for a project
+or any advice!
+
+I enjoyed running Coding Friday this semester!
 
 
 

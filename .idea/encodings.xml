@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/week_10_mongo/quiz_generator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/week_10_mongo/quiz_generator/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/week_1_api/flashlight/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/week_1_api/flashlight/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/week_2_sql/librarySystem/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/week_2_sql/librarySystem/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/week_5_discord_bot/discord-bot/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/week_5_discord_bot/discord-bot/src/main/resources" charset="UTF-8" />
+  </component>
+</project>

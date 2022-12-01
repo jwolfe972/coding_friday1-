@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/coding_friday1-.iml" filepath="$PROJECT_DIR$/.idea/coding_friday1-.iml" />
+      <module fileurl="file://$PROJECT_DIR$/week_5_discord_bot/discord-bot/discord-bot.iml" filepath="$PROJECT_DIR$/week_5_discord_bot/discord-bot/discord-bot.iml" />
+      <module fileurl="file://$PROJECT_DIR$/week_1_api/flashlight/flashlight.iml" filepath="$PROJECT_DIR$/week_1_api/flashlight/flashlight.iml" />
+      <module fileurl="file://$PROJECT_DIR$/week_2_sql/librarySystem/librarySystem.iml" filepath="$PROJECT_DIR$/week_2_sql/librarySystem/librarySystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/week_10_mongo/quiz_generator/quiz_generator.iml" filepath="$PROJECT_DIR$/week_10_mongo/quiz_generator/quiz_generator.iml" />
+    </modules>
+  </component>
+</project>
