@@ -260,13 +260,13 @@ def generateBarGraphForTop(data, year, number=10):
 if __name__ == "__main__":
     # for i in range(1995, 2022):
     #     value = str(i)
-    value = '2011'
+    value = '2018'
     playerInfo = getPlayerTableInMemory()
     playerStatInfo = getplayerStatsInfo()
     draftClassInfo = generateDraftClassData(value)
     cp = generateCareerPointAveragesByYear(draftClassInfo)
     bp = generateCareerPointAverages(draftClassInfo)
-    # generateGraph(cp, value)
+    generateGraph(cp, value)
     
     generateBarGraphForTop(bp, value, number=7)
 
